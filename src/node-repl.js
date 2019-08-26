@@ -22,9 +22,7 @@ var getFileContents = function(filename) {
     filenames,
     foundFilename;
 
-  filenames = /\..+$/.test(filename) // if an extension is specified,
-    ? [filename] // don't bother checking others
-    : _.map(["", ".roy", ".lroy"], function(ext) {
+  filenames = /\..+$/.test(filename) ? [filename] : _.map(["", ".roy", ".lroy"], function(ext) {
         return filename + ext;
       });
 
